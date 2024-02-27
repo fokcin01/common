@@ -1,4 +1,8 @@
-public class ResourseTO {
+package client.to;
+
+import org.modelmapper.ModelMapper;
+
+public class ResourceTO {
     private int id;
     private String name;
     private int price;
@@ -27,9 +31,14 @@ public class ResourseTO {
         this.price = price;
     }
 
-    public ResourseTO(int id, String name, int price) {
+    public ResourceTO(int id, String name, int price) {
         this.id = id;
         this.name = name;
         this.price = price;
     }
+
+    public ResourceTO() {
+    }
+
+
 }
