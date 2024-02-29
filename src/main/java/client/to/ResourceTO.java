@@ -1,8 +1,5 @@
 package client.to;
 
-import org.example.model.Resource;
-import org.modelmapper.ModelMapper;
-
 public class ResourceTO {
     private int id;
     private String name;
@@ -39,16 +36,6 @@ public class ResourceTO {
     }
 
     public ResourceTO() {
-    }
-
-    public static Resource toEntity(ResourceTO dto) {
-        ModelMapper modelMapper = new ModelMapper();
-        return modelMapper.map(dto, Resource.class);
-    }
-
-    public static ResourceTO toDto(Resource entity) {
-        ModelMapper modelMapper = new ModelMapper();
-        return modelMapper.map(entity, ResourceTO.class);
     }
 
     @Override
