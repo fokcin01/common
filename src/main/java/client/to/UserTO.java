@@ -1,14 +1,9 @@
 package client.to;
 
-import java.io.Serializable;
-
-public class UserTO implements Serializable {
-    private int id;
+public class UserTO extends AbstractTo {
     private String username;
 
-    public UserTO(Integer id, String username, int price) {
-
-        this.id = id;
+    public UserTO(String username) {
         this.username = username;
     }
 
@@ -19,17 +14,8 @@ public class UserTO implements Serializable {
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
                 ", username='" + username + '\'' +
                 '}';
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getUsername() {
