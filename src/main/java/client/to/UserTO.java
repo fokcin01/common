@@ -1,6 +1,8 @@
 package client.to;
 
-public class UserTO {
+import java.io.Serializable;
+
+public class UserTO implements Serializable {
     private int id;
     private String username;
 

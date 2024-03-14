@@ -1,6 +1,8 @@
 package client.to;
 
-public class ResourceTO {
+import java.io.Serializable;
+
+public class ResourceTO implements Serializable {
     private int id;
     private String name;
     private int price;
