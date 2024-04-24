@@ -2,11 +2,13 @@ package client.to;
 
 public class UserTO extends AbstractTo {
     private String username;
+    private String userPassword;
 
-    public UserTO(String username) {
+    public UserTO(Integer id, String username,String userPassword) {
+        super(id);
         this.username = username;
+        this.userPassword = userPassword;
     }
-
     public UserTO() {
 
     }
@@ -14,7 +16,8 @@ public class UserTO extends AbstractTo {
     @Override
     public String toString() {
         return "User{" +
-                ", username='" + username + '\'' +
+                "username='" + username + '\'' +
+                ", userPassword='" + userPassword + '\'' +
                 '}';
     }
 
@@ -24,5 +27,13 @@ public class UserTO extends AbstractTo {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public String getUserPassword() {
+        return userPassword;
+    }
+
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
     }
 }
