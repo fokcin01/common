@@ -5,7 +5,11 @@ public class UserTO extends AbstractTo {
     private String userPassword;
     private String userEmail;
 
-    public UserTO(Integer id, String username,String userPassword, String userEmail) {
+    public UserTO(Integer id) {
+        super(id);
+    }
+
+    public UserTO(Integer id, String username, String userPassword, String userEmail) {
         super(id);
         this.username = username;
         this.userPassword = userPassword;
